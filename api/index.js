@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 var app = express();
-
+app.set("trust proxy", true);
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC
 app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 204
